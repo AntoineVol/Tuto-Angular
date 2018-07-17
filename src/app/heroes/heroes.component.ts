@@ -7,6 +7,7 @@ import { HeroService } from '../hero.service';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
+
 export class HeroesComponent implements OnInit {
   selectedHero:Hero;
   heroes:Array<Hero>;
@@ -27,5 +28,11 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero:Hero):void{
     this.selectedHero = hero;
+  }
+  deleteHero(heroId:number){
+    let index = this.heroes.findIndex((hero)=>hero.id===heroId);
+    if(index>=0){
+      this.heroes.splice(index,1);
+    }
   }
 }

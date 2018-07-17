@@ -1,23 +1,31 @@
 li{
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
 }
 span{
     border-radius: 5%;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    padding: 1em;
+    width: 15em;
 }
 span.badge{
     color: white;
     background-color: darkcyan;
     
 }
-span.badgeName{
-    color: black;
-    background-color: wheat;
-}
+
 .selected {
     color: red  !important;
     background-color: #CFD8DC !important;
   }
+.logo{
+    height: 2.5em;
+    /* margin-bottom: 4%; */
+}
+.hero{
+    height: 360px;
+}
+.heroBox{
+    margin-bottom:1em; 
+}
