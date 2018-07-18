@@ -1,11 +1,29 @@
-<div *ngIf="hero">
+<!-- 
     <h2>
       Detail de {{hero.name | uppercase}}
     </h2>
     
-    <div>
+    <div class="deck-card">
       <label>
+        <h4>id : {{hero.id}}</h4>
         <input [(ngModel)]="hero.name" placeholder="=name"/>
       </label>
+    </div> -->
+<div class="container-fluid d-flex justify-content-center">
+  <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">Detail de {{hero.name | uppercase}}</div>
+    <div class="card-body">
+      <h5 class="card-title">id : {{hero.id}}</h5>
+      <p class="card-text">
+        <span class="card-title">nom :</span>
+        <input [(ngModel)]="hero.name" placeholder="Name"/>
+      </p>
+      <p class="card-text">
+        <span class="card-title">Picture path :</span>
+        <input [(ngModel)]="hero.img" placeholder="Picture path"/>
+      </p>
+      <button class="btn btn-warning" (click)="goBack()">Retour</button>
     </div>
   </div>
+</div>
+

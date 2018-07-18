@@ -1,5 +1,5 @@
 export class Hero{
-    private static ID_COUNT=20;
+    private static ID_COUNT=0;
     id: number;
     name: String;
     img:String;

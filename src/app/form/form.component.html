@@ -1,0 +1,16 @@
+<div class="hero-edit container-fluid">
+    <form class="form" #heroForm="ngForm" (ngSubmit)="validateHero($event, heroForm)">
+      <legend>Ajouter un nouveau Hero</legend>
+      <div class="row">
+                    <div class="form-group col-sm-6 col-md-4">  
+                      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newHeroName" #nameControl="ngModel" placeholder="name" required/>
+                    </div>
+        <div class="alert alert-danger col-2" *ngIf="nameControl.invalid && nameControl.dirty">Champs obligatoire</div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-6 col-md-4">  
+          <button class="btn btn-success"  [disabled]="heroForm.invalid" >Ajouter</button>
+        </div>
+      </div>
+  </form>
+</div>
