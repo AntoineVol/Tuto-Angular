@@ -11,13 +11,13 @@ import { HeroService } from './hero.service';
 })
 export class AppComponent {
   title : String;
-  newHeroName:String;
+
 
 
 
   constructor(private heroService : HeroService){
     this.title= 'Tour Of Hero';
-    this.newHeroName='';
+    
   }
 
   ngOnInit(){
@@ -25,11 +25,5 @@ export class AppComponent {
     
     this.heroService.loadMock();
   }
-  validateHero(event : any, form:NgForm){
-    console.log("Validation du nouveau hero");
-    let hero : Hero = new Hero();
-    hero.name = this.newHeroName;
-    this.heroService.addHeroes(hero);
-    form.resetForm;
-  }
+
 }
