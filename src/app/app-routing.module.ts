@@ -8,10 +8,12 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { FormComponent } from './form/form.component';
  
 const routes: Routes = [
+  { path:'', redirectTo:'/heroes',pathMatch:'full'},
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent},
-  {path:'new', component:FormComponent}
+  { path:'new', component:FormComponent},
+  { path: '**', component:HeroesComponent}
 ];
  
 @NgModule({
